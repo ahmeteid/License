@@ -1,0 +1,537 @@
+/* Start Veriabel */
+:root {
+    --section-padding: 100px;
+    --main-color: #41e0d8;
+}
+
+/* End Veriabel */
+
+/* Start Rules */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Jomhuria', cursive;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Work Sans', sans-serif;
+}
+
+/* End Rules */
+
+/* Strat Components */
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* Small Screen */
+@media (min-width: 767px) {
+    .container {
+        width: 750px;
+    }
+}
+
+/* Medium Screen */
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+/* Large Screen */
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+/* End Components */
+
+/* Strat Heade */
+.head {
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    left: 0;
+}
+
+.head .container {
+    margin-top: 30px;
+    padding-bottom: 50px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.head .container img {
+    width: 100px;
+}
+
+.head .container .right-said {
+    display: flex;
+    align-items: flex-end;
+    position: absolute;
+    right: 50px;
+    bottom: 20px;
+}
+
+@media (max-width: 767px) {
+    .head .container .right-said {
+        flex-direction: column;
+    }
+}
+
+.head .container .right-said p {
+    text-transform: uppercase;
+    color: white;
+    margin-right: 60px;
+}
+
+@media (max-width: 767px) {
+    .head .container .right-said p {
+        order: 2;
+    }
+}
+
+.head .container .right-said input[type="submit"] {
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #262a34;
+    color: white;
+    text-transform: uppercase;
+}
+
+@media (max-width: 767px) {
+    .head .container .right-said input[type="submit"] {
+        margin-bottom: 10px;
+    }
+}
+
+/* End Heade */
+
+/* Start Landing */
+.landing {
+    min-height: 100vh;
+    background-image: url(../images/landing.png);
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.landing .container {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    position: relative;
+}
+
+@media (max-width: 767px) {
+    .landing .container {
+        flex-direction: column;
+    }
+}
+
+.landing .images img {
+    width: 220px;
+    position: absolute;
+    bottom: -600px;
+}
+
+@media (max-width: 767px) {
+    .landing .images img {
+        display: none;
+    }
+}
+
+.landing .container .images img:nth-of-type(2) {
+    position: absolute;
+    bottom: -400px;
+    background-color: rgb(255 255 255 / 50%);
+}
+
+
+.landing .text {
+    position: absolute;
+    top: 230%;
+    transform: translateY(-50%);
+    right: 60px;
+    justify-content: flex-end;
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+}
+
+@media (max-width: 767px) {
+    .landing .text {
+        width: 100%;
+        text-align: center;
+        transform: translateY(-50%);
+        left: 0px;
+    }
+
+    .landing .text p {
+        text-align: start;
+        padding: 0 0 0 10px;
+    }
+}
+
+.landing .text h2 {
+    line-height: 1.5;
+    margin: 0 0 50px;
+}
+
+.landing .text h2 span {
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.landing .text p {
+    color: white;
+}
+
+.landing .text .button {
+    background-color: black;
+    width: fit-content;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+    bottom: -60px;
+    left: 0;
+}
+
+@media (max-width: 767px) {
+    .landing .text .button {
+        left: 25%;
+    }
+}
+
+.landing .text .button i {
+    position: absolute;
+    left: 10px;
+    top: 40%;
+    font-size: 25px;
+    color: var(--main-color);
+}
+
+.landing .text .button p:first-of-type {
+    font-size: 10px;
+    color: var(--main-color);
+    margin-left: 20px;
+
+}
+
+.landing .text .button p:last-of-type {
+    color: var(--main-color);
+    font-weight: bold;
+    text-transform: capitalize;
+    margin-left: 20px;
+}
+
+/* End Landing */
+
+/* Start Second */
+.second {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+    background-image: url(../images/second.jpeg);
+    color: white;
+}
+
+.second .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    justify-content: center;
+    column-gap: 60px;
+}
+
+@media (max-width: 767px) {
+    .second .container {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.second .text h2 {
+    font-size: 30px;
+    font-weight: bold;
+    margin: 0 0 50px;
+}
+
+.second .text p {
+    font-size: 14px;
+    line-height: 2;
+    color: #e8e2e2;
+    margin: 0 0 60px;
+}
+
+.second .text a {
+    text-decoration: none;
+    color: white;
+    background-color: var(--main-color);
+    padding: 10px 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.second .pages {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.second .pages .spaces {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.second .pages .spaces span {
+    width: 48%;
+    background-color: #3f4551;
+
+}
+
+.second .pages .shuffel {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: -60px;
+    left: 40%;
+}
+
+@media (max-width: 767px) {
+    .second .pages .shuffel {
+        display: none;
+    }
+}
+
+.second .pages .shuffel li {
+    padding: 10px;
+    border-radius: 50%;
+    margin-right: 10px;
+    background-color: #ccc;
+    list-style: none;
+}
+
+.second .pages .shuffel li.active {
+    background-color: white;
+    border-radius: 10px;
+    width: 30px;
+}
+
+/* End Second */
+
+/* Start therd  */
+.therd {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+    background-image: url(../images/landing.png);
+    min-height: 100vh;
+    background-size: cover;
+    color: white;
+    overflow: hidden;
+}
+
+.therd .head-text {
+    text-align: center;
+    margin: 0 0 100px;
+}
+
+.therd .head-text h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.therd .head-text p {
+    color: black;
+    font-size: 10px;
+}
+
+.therd .content-area {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    position: relative;
+}
+
+.therd .content-area .images img:first-child {
+    width: 220px;
+    position: absolute;
+    top: 40px;
+}
+
+@media (max-width: 767px) {
+    .therd .content-area .images img:first-child {
+        top: 80px;
+    }
+}
+
+.therd .content-area .images img:last-child {
+    position: absolute;
+    width: 220px;
+    background-color: rgb(255 255 255 / 40%);
+    left: 0;
+    top: 190px;
+}
+
+.therd .content-area .text {
+    background-color: white;
+    padding: 50px;
+    width: 500px;
+    border-radius: 10px;
+    color: black;
+    position: absolute;
+    left: 250px;
+    top: 130px;
+    text-align: start;
+}
+
+@media (max-width: 767px) {
+    .therd .content-area .text {
+        display: none;
+    }
+}
+
+
+.therd .content-area .text span {
+    color: var(--main-color);
+    position: absolute;
+    left: 60px;
+    bottom: 20px;
+    text-transform: capitalize;
+}
+
+.therd .content-area .text q {
+    line-height: 2;
+}
+
+.therd .content-area .text q::before {
+    color: var(--main-color);
+    position: absolute;
+    top: 10px;
+    left: 40px;
+    font-size: 40px;
+}
+
+.therd .content-area .text q::after {
+    color: var(--main-color);
+    font-size: 40px;
+    position: absolute;
+    right: 10px;
+    bottom: 0;
+}
+
+
+.therd .content-area .text::before {
+    content: "";
+    position: absolute;
+    border: 15px solid;
+    border-color: transparent white transparent transparent;
+    left: -29px;
+    top: 50%;
+}
+
+/* End therd  */
+
+/* Start Join us */
+.join-us {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+    background-image: url(../images/second.jpeg);
+    color: white;
+    text-align: center;
+}
+
+.join-us .head-text h2 {
+    font-size: 40px;
+    margin-bottom: 50px;
+}
+
+.join-us .head-text p {
+    line-height: 2;
+    margin-bottom: 60px;
+}
+
+@media (max-width: 767px) {
+    .join-us form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.join-us form input[type="email"] {
+    outline-style: none;
+    padding: 10px 20px;
+    width: 400px;
+    background-color: #51555d;
+    color: white;
+    border: none;
+}
+
+@media (max-width: 767px) {
+    .join-us form input[type="email"] {
+        width: 300px;
+        margin-bottom: 30px;
+    }
+}
+
+.join-us form input[type="email"]::placeholder {
+    color: white;
+    text-transform: capitalize;
+}
+
+.join-us form input[type="submit"] {
+    text-transform: uppercase;
+    padding: 10px 40px;
+    color: var(--main-color);
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+@media (max-width: 767px) {
+    .join-us form input[type="submit"] {
+        width: 200px;
+    }
+}
+
+
+/* End Join us */
+
+/* Strat Footer */
+.foot {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+    background-image: url(../images/footer.jpg);
+    background-size: cover;
+    text-align: center;
+}
+
+.foot span {
+    color: var(--main-color);
+    text-transform: uppercase;
+}
+
+.foot p {
+    text-transform: capitalize;
+    font-weight: bold;
+    margin-top: 30px;
+}
+
+/* End Footer */
